@@ -1,2 +1,7 @@
 
 \.idea/
+
+mlruns/0/31f400e4a0ab48fcbfc4549a9d5bbe4d/artifacts/
+
+output\.txt
+mlruns/*
