@@ -1,6 +1,6 @@
 import mlflow
 mlflow.set_tracking_uri('http://0.0.0.0:5000/')
-print("I am printing Hello world!")
+# print("I am printing Hello world!")
 with mlflow.start_run() as run:
     # Log a parameter (key-value pair)
     mlflow.log_param("param1", 5)
