@@ -1,5 +1,6 @@
 import mlflow
 
+print("I am printing Hello world!")
 with mlflow.start_run() as run:
     # Log a parameter (key-value pair)
     mlflow.log_param("param1", 5)
@@ -11,5 +12,5 @@ with mlflow.start_run() as run:
 
     # Log an artifact (output file)
     with open("output.txt", "w") as f:
-        f.write("Hello world!")
+        f.write("I am logging Hello world!")
     mlflow.log_artifact("output.txt")

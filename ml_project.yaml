@@ -1,0 +1,7 @@
+name: Hello Databricks
+
+conda_env: environment.yml
+
+entry_points:
+  main:
+    command: "python hello_world.py"
