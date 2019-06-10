@@ -2,9 +2,8 @@ import mlflow
 import click
 
 
-@click.command(help="Give a name to the hello app")
-@click.option("--your-name", default="Unidentified",
-              help="Limit the data size to run comfortably on a laptop.")
+@click.command()
+@click.option("--your-name", type=str, default="Unidentified")
 def hello_databricks(your_name):
     with mlflow.start_run() as run:
         # Log a parameter (key-value pair)
@@ -17,9 +16,9 @@ def hello_databricks(your_name):
 
         # Log an artifact (output file)
         with open("output.txt", "w") as f:
-            f.write("I am logging Hello world! Hello {}".format(name))
+            f.write("I am logging Hello world! Hello {}".format(your_name))
         mlflow.log_artifact("output.txt")
 
 
-if __name__=="__main__":
+if __name__ == "__main__":
     hello_databricks()
