@@ -4,6 +4,6 @@ conda_env: environment.yml
 
 entry_points:
   parameters:
-    name: "Niki"
+    your_name: "Niki"
   main:
-    command: "python hello_world.py --your-name {name}"
+    command: "python hello_world.py --your-name {your_name}"
