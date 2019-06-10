@@ -5,7 +5,7 @@ import click
 @click.command(help="Give a name to the hello app")
 @click.option("--your-name", default="Unidentified",
               help="Limit the data size to run comfortably on a laptop.")
-def hello_databricks(name):
+def hello_databricks(your_name):
     with mlflow.start_run() as run:
         # Log a parameter (key-value pair)
         mlflow.log_param("param1", 5)
